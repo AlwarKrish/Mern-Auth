@@ -219,7 +219,7 @@ class Home extends Component {
                 <p>{signInError}</p>
               ) : (null)
             }
-            <p><h2 class="form-signin-heading"><center>Please sign in</center></h2></p>
+            <center><h2 class="form-signin-heading">Sign in</h2></center>
             <input
               type="email"
               placeholder="Enter Email"
