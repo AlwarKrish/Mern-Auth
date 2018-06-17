@@ -212,20 +212,22 @@ class Home extends Component {
     if (!token) {
       return (
         <center><div class="container">
-          <div>
+        <form>
+          <div class="form-group">
             {
               (signInError) ? (
                 <p>{signInError}</p>
               ) : (null)
             }
-            <p><h2 class="form-signin-heading">Please sign in</h2></p>
+            <p><h2 class="form-signin-heading"><center>Please sign in</center></h2></p>
             <input
               type="email"
-              placeholder="Email"
+              placeholder="Enter Email"
               value={signInEmail}
               onChange={this.onTextboxChangeSignInEmail}
             />
             <br />
+
             <input
               type="password"
               placeholder="Password"
@@ -235,6 +237,7 @@ class Home extends Component {
             <br />
             <button class="brn btn-lg btn-primary" onClick={this.onSignIn}>Sign In</button>
           </div>
+          </form>
           <br />
           <br />
           <div>
@@ -250,6 +253,8 @@ class Home extends Component {
               value={signUpEmail}
               onChange={this.onTextboxChangeSignUpEmail}
             /><br />
+            <small class="form-text text-muted">We ll never share ur email</small>
+            <br />
             <input
               type="password"
               placeholder="Password"
